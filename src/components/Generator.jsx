@@ -18,11 +18,11 @@ function Header(props) {
   );
 }
 
-export default function Generator() {
+export default function Generator(props) {
+  const { poison,muscles,goal,setPoison,setMuscles,setGoal,updateWorkout } = props;
   const [showModal, setShowModal] = useState(false);
-  const [poison, setPoison] = useState("individual");
-  const [muscles, setMuscles] = useState([]);
-  const [goal, setGoal] = useState("strength_power");
+
+  
 
   function toggleModal() {
     setShowModal(!showModal);
@@ -141,7 +141,7 @@ export default function Generator() {
           );
         })}
       </div>
-      <Button text={"Formulate"}></Button>
+      <Button func={updateWorkout} text={"Formulate"}></Button>
     </SectionWrapper>
   );
 }
