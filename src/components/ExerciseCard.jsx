@@ -21,7 +21,7 @@ export default function ExerciseCard(props) {
             </div>
             <div className='flex flex-col'>
                 <h3 className='text-slate-400 text-sm'>Muscle Groups</h3>
-                <p className='capitalize'>{exercise.muscles.join(' & ')}</p>
+                <p className='capitalize font-bold'>{exercise.muscles.join(' & ')}</p>
             </div>
 
             <div className='flex flex-col bg-slate-950 rounded gap-2 '>
